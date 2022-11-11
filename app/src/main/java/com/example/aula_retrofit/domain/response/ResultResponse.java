@@ -14,9 +14,6 @@ public class ResultResponse {
     @SerializedName(value = "results")
     private List<PokemonResponse> pokemonList;
 
-    public ResultResponse() {
-    }
-
     public ResultResponse(List<PokemonResponse> pokemonList) {
         this.pokemonList = pokemonList;
     }
