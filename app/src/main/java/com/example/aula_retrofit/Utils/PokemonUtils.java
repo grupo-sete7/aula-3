@@ -10,20 +10,6 @@ public class PokemonUtils {
     private static final String BASE_IMAGE = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
 
     public static String getUrlMyPokemon(int id) {
-        if(id > 0) {
-            return BASE_IMAGE + formatNumber(id) + ".png";
-        }
-
-        return "";
-    }
-
-    private static String formatNumber(int id) {
-        String idString = String.valueOf(id);
-        if(id < 10) {
-            return  "00" + idString;
-        } else if (id < 100) {
-            return "0" + idString;
-        }
-        return idString;
+        return id > 0 ? String.format("%s%03d.png", BASE_IMAGE, id) : "";
     }
 }
